@@ -373,12 +373,20 @@ main {
     max-width: 1050px;
     margin: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 20px;
-    row-gap: 20px;
+    flex-direction: column; /* Mostrar las filas en columna */
+    align-items: center; /* Centrar las filas horizontalmente */
+}
 
+.row {
+    display: flex;
+    justify-content: center; /* Centrar las tarjetas en cada fila */
+    gap: 20px; /* Espacio entre tarjetas en cada fila */
+}
+
+.card-item {
+    flex: 1;
+    max-width: calc(50% - 20px); /* Para que las tarjetas ocupen la mitad del ancho en cada fila */
+    margin-bottom: 20px;
 }
 
 .experiencias-video {
